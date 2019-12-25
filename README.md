@@ -3,7 +3,7 @@
   
   Starting from today(12-25-2019), insist on every day, from the basic algorithm to leetcode, write an algorithm and his optimal solution
 
-## Bubble Sort
+## [Bubble Sort](https://github.com/Gqijian/algorithm/blob/master/algorithm/src/main/java/com/gao/sort/BubbleSort.java)
 
 ```
     public int[] bubbleSort(int[] arr){
@@ -34,7 +34,7 @@
     }
 ```
 
-## Select Sort
+## [Select Sort](https://github.com/Gqijian/algorithm/blob/master/algorithm/src/main/java/com/gao/sort/SelectSort.java)
 
 ```
 public int[] selectSort(int[] arr){
