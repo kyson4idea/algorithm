@@ -1,5 +1,7 @@
 # Algorithm
-  I like God do not play with dice and do not believe in coincidence. I just believe that strving will not disappoint me, in this world. Starting from today(12-25-2019), insist on every day, from the basic algorithm to leetcode, write an algorithm and his optimal solution
+  I like God do not play with dice and do not believe in coincidence. I just believe that strving will not disappoint me, in this world. 
+  
+  Starting from today(12-25-2019), insist on every day, from the basic algorithm to leetcode, write an algorithm and his optimal solution
 
 ## Bubble Sort
 
