@@ -65,8 +65,8 @@ public int[] selectSort(int[] arr){
 # Leetcode
 Here are the topics related to leetcode, I will try to make some ideas and explanations
 
-## [TwoSum](https://github.com/Gqijian/algorithm/blob/master/algorithm/src/main/java/com/gao/leetcode/TwoSum.java)
+[TwoSum My solution](https://github.com/Gqijian/algorithm/blob/master/algorithm/src/main/java/com/gao/leetcode/TwoSum.java)
 ```
-经典的第一题二数之和，[Leetcode url](https://leetcode.com/problems/two-sum/)
+经典的第一题<两数之和>，[Leetcode url](https://leetcode.com/problems/two-sum/)
 ```
 
