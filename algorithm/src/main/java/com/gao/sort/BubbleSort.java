@@ -1,7 +1,8 @@
 package com.gao.sort;
 
 /**
- * Bubble sort and related optimizations
+ * @title Bubble sort and related optimizations
+ *
  * @author gaoqijian
  * @create 2019-12-25 18:48
  *
