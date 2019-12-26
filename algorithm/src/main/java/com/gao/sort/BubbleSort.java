@@ -1,7 +1,12 @@
 package com.gao.sort;
 
+import org.junit.jupiter.api.Test;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
- * @title Bubble sort and related optimizations
+ * @title Bubble sort and related optimizations O(n^2)
  *
  * @author gaoqijian
  * @create 2019-12-25 18:48
@@ -13,6 +18,29 @@ package com.gao.sort;
  *  3、若某一趟无交换，可提前结束
  */
 public class BubbleSort {
+
+    @Test
+    public void testBubbleSort(){
+
+        /**
+         * 创建一个 80000 数据的随机数组 然后排序
+         */
+        int[] arr = new int[80000];
+        for(int i=0; i<arr.length; i++){
+            arr[i] = (int)(Math.random()*8000000); // 获得一个 [0, 80000] 的随机数组
+        }
+
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date1Str = sdf.format(date);
+        System.out.println("排序前时间" + date1Str);
+
+        bubbleSort(arr);
+
+        Date date2 = new Date();
+        String date2Str = sdf.format(date2);
+        System.out.println("排序后时间" + date2Str);
+    }
 
     public int[] bubbleSort(int[] arr){
 
