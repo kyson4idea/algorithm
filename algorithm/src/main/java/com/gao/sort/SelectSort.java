@@ -1,5 +1,10 @@
 package com.gao.sort;
 
+import org.junit.jupiter.api.Test;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 /**
  * @title Select Sort
  *
@@ -10,6 +15,47 @@ package com.gao.sort;
  * 通过n-1次交换，完成排序
  */
 public class SelectSort {
+
+    @Test
+    public void testBubbleSort(){
+
+        /**
+         * 创建一个 80000 数据的随机数组 然后排序
+         */
+        int[] arr = new int[80000];
+        for(int i=0; i<arr.length; i++){
+            arr[i] = (int)(Math.random()*8000000); // 获得一个 [0, 80000] 的随机数组
+        }
+
+        Date date = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String date1Str = sdf.format(date);
+        System.out.println("排序前时间" + date1Str);
+
+        selectSort(arr);
+
+        Date date2 = new Date();
+        String date2Str = sdf.format(date2);
+        System.out.println("排序后时间" + date2Str);
+    }
+
+    public static int[] stepOne(int[] arr){
+
+        int minIndex = 0;
+        int min = arr[0];
+        for(int j = 0 + 1; j < arr.length; j++){
+            if(min>arr[j]){
+                min = arr[j];
+                minIndex = j;
+            }
+        }
+
+        arr[minIndex] = arr[0];
+        arr[0] = min;
+
+        return null;
+    }
+
 
     public int[] selectSort(int[] arr){
 
@@ -34,5 +80,7 @@ public class SelectSort {
         }
         return arr;
     }
+
+
 
 }
