@@ -10,6 +10,7 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] arr = {0, -11, 0, 23, -567, 789};
+        quickSort(arr, 0 , arr.length-1);
     }
 
     public static void quickSort(int[] arr, int left, int right){
@@ -28,6 +29,7 @@ public class QuickSort {
             while (arr[l] < pivot){
                 l +=1;
             }
+
             //找到小于等于pivot的值
             while (arr[r] > pivot){
                 r -= 1;
