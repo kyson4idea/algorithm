@@ -4,12 +4,14 @@ package com.gao.sort;
  * @author gaoqijian
  * @title
  * @create 2019-12-26 21:25
- * @description
+ * @description 快速排序（Quicksort）是对 冒泡排序的一种改进。基本思想是：通过一趟排序将要排序的数据分割成独立的两
+ * 部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排
+ * 序， 整个排序过程可以递归进行，以此达到整个数据变成有序序列
  */
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] arr = {0, -11, 0, 23, -567, 789};
+        int[] arr = {0, -11, 1, 0, 23, -567, 789,1};
         quickSort(arr, 0 , arr.length-1);
     }
 
