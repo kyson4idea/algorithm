@@ -7,6 +7,10 @@ package com.gao.sort;
  * @description 快速排序（Quicksort）是对 冒泡排序的一种改进。基本思想是：通过一趟排序将要排序的数据分割成独立的两
  *              部分，其中一部分的所有数据都比另外一部分的所有数据都要小，然后再按此方法对这两部分数据分别进行快速排
  *              序， 整个排序过程可以递归进行，以此达到整个数据变成有序序列
+ *
+ *              选取基准（pivot）：三数取中的方法，选最左最右和最中间三个数，选其中的中值
+ *
+ *              快速排序优化：当 N <= 20 时，快速不如插入排序效果好，小数组使用插入排序
  */
 public class QuickSort {
 
@@ -23,11 +27,11 @@ public class QuickSort {
         int pivot = arr[(l + r) / 2];  //中轴值
 
         /**
-         * 目的是让比pivot小的 放到坐边 大的放到右边
+         * 目的是让比pivot小的 放到左边 大的放到右边
          */
         while (l < r){
 
-            //在pivot的坐边一直找 找到打鱼等于pivot的值，才退出
+            //在pivot的左边一直找 找到大于等于pivot的值，才退出
             while (arr[l] < pivot){
                 l +=1;
             }
@@ -37,6 +41,9 @@ public class QuickSort {
                 r -= 1;
             }
 
+            /**
+             * 如果 l >= r 说明pivot的左右两的值，已经全部按照，左边全部小于等于pivot，右边全部大于pivot排序
+             */
             if(l >= r){
                 break;
             }
@@ -46,6 +53,7 @@ public class QuickSort {
             arr[l] = arr[r];
             arr[r] = temp;
 
+            //这里是排除三个连续数字 如 ： 0 0 0
             if(arr[l] == pivot){
                 r--;
             }
