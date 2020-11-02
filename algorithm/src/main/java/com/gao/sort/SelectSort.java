@@ -17,7 +17,7 @@ import java.util.Date;
 public class SelectSort {
 
     @Test
-    public void testBubbleSort(){
+    public void testSelectSort(){
 
         /**
          * 创建一个 80000 数据的随机数组 然后排序
@@ -38,24 +38,6 @@ public class SelectSort {
         String date2Str = sdf.format(date2);
         System.out.println("排序后时间" + date2Str);
     }
-
-    public static int[] stepOne(int[] arr){
-
-        int minIndex = 0;
-        int min = arr[0];
-        for(int j = 0 + 1; j < arr.length; j++){
-            if(min>arr[j]){
-                min = arr[j];
-                minIndex = j;
-            }
-        }
-
-        arr[minIndex] = arr[0];
-        arr[0] = min;
-
-        return null;
-    }
-
 
     public int[] selectSort(int[] arr){
 
@@ -82,5 +64,22 @@ public class SelectSort {
     }
 
 
+
+    public static int[] stepOne(int[] arr){
+
+        int minIndex = 0;
+        int min = arr[0];
+        for(int j = 0 + 1; j < arr.length; j++){
+            if(min>arr[j]){
+                min = arr[j];
+                minIndex = j;
+            }
+        }
+
+        arr[minIndex] = arr[0];
+        arr[0] = min;
+
+        return null;
+    }
 
 }
