@@ -28,8 +28,6 @@ public class ShellSort {
      */
     public static int[] shellSortFinal(int[] arr) {
 
-        int tmp = 0;
-
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
 
             // 从第 gap 个元素，逐个对其所在的组进行直接插入排序
