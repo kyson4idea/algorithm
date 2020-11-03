@@ -6,74 +6,101 @@ package com.gao.review;
  */
 public class Sort {
 
-    public static int[] BubbleSort(int[] arr) {
+    public static int[] bubbleSort(int[] arr) {
 
         int tmp;
         boolean flag = false;
 
+        for (int i = 0; i < arr.length - 1; i ++){
 
-        for(int i = 0; i < arr.length-1; i++){
+            for (int j = 0; j < arr.length - i - 1; j ++){
 
-            for(int j = 0; j < arr.length - i - 1; j++){
-
-                if(arr[j] > arr[j+1] ){
+                if(arr[j] > arr[j+1]){
                     tmp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = tmp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
                     flag = true;
                 }
             }
 
             if(!flag){
                 break;
-            }else {
-                flag = false;
             }
-
         }
 
         return arr;
     }
 
-    public static int[] SelectSort(int[] arr){
+    public static int[] selectSort(int[] arr){
 
-        for (int j = 0; j < arr.length - 1; j++){
-            int min = arr[j];
-            int minIndex = j;
+        int min;
+        int minIndex;
 
-            for (int i = 0 + j; i < arr.length; i++){
+        for (int i = 0; i < arr.length - 1; i++){
+            min = arr[i];
+            minIndex = i;
 
-                if(min > arr[i]){
+            for (int j = 0 + i; j < arr.length; j++){ // here bug
 
-                    min = arr[i];
-                    minIndex = i;
+                if(arr[minIndex] > arr[j]){
+                    min = arr[j];
+                    minIndex = j;
                 }
+            }
 
-                arr[minIndex] = arr[j];
-                arr[j] = min;
+            if(minIndex != i){
+                arr[minIndex] = arr[i];
+                arr[i] = min;
             }
         }
 
         return arr;
     }
 
-    public static int[] InsertSort(int[] arr){
+    public static int[] insertSort(int[] arr){
 
-        for(int i = 1; i < arr.length; i++){
+        int inVal;
+        int inIndex;
 
-            int insertVal = arr[i];
-            int insertIndex = i-1;
+        for (int i = 1; i < arr.length; i++){
+            inIndex = i-1;
+            inVal = arr[i];
 
-            while (insertIndex >= 0 && insertVal < arr[insertIndex]){
-                arr[insertIndex + 1] = arr[insertIndex];
-                insertIndex--;
+            while (inIndex >= 0 && inVal < arr[inIndex]){
+                arr[inIndex + 1] = arr[inIndex];
+                inIndex --;
             }
 
-            if(insertIndex + 1 != 0){
-                arr[insertIndex + 1] = insertVal;
+            if(inIndex + 1 != i){
+                arr[inIndex + 1] = inVal;
             }
         }
 
+        return arr;
+    }
+
+    public static int[] shellSort(int[] arr){
+
+        int tmp;
+        int j;
+
+        for (int gap = arr.length / 2; gap > 0; gap /= 2){
+
+            for (int i = gap; i < arr.length; i++){
+
+                j = i;
+                tmp = arr[j];
+
+                if(arr[j] < arr[j - gap]){
+
+                    while (j - gap >= 0 && tmp < arr[j - gap]){
+                        arr[j] = arr[j - gap];
+                        j -= gap;
+                    }
+                    arr[j] = tmp;
+                }
+            }
+        }
         return arr;
     }
 }
