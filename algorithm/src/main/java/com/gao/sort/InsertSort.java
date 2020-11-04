@@ -22,9 +22,9 @@ public class InsertSort {
             /**
              * 给 insertVal 找到插入的位置
              * 说明
-             * 1. insertIndex >= 0 保证在给 insertVal 找插入位置，不越界
-             * 2. insertVal < arr[insertIndex] 待插入的数，还没有找到插入位置
-             * 3. 就需要将 arr[insertIndex] 后移
+             *  1. insertIndex >= 0 保证在给 insertVal 找插入位置，不越界
+             *  2. insertVal < arr[insertIndex] 待插入的数，还没有找到插入位置
+             *  3. 就需要将 arr[insertIndex] 后移
              */
             while (insertIndex >= 0 && insertVal < arr[insertIndex]) {
                 arr[insertIndex + 1] = arr[insertIndex];// arr[insertIndex]

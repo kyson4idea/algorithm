@@ -38,6 +38,7 @@ public class ShellSort {
 
                 if (arr[j] < arr[j - gap]) {
 
+                    //只是为了找出前一个位置
                     while (j - gap >= 0 && temp < arr[j - gap]) {
                         //移动
                         arr[j] = arr[j - gap];
