@@ -1,7 +1,12 @@
 package com.gao.sort;
 
 /**
- * 归并排序
+ *
+ * @title 归并排序
+ * @author gaoqijian
+ * @create 2020-11-10 10:26
+ *
+ * @description
  */
 public class MergeSort {
 
