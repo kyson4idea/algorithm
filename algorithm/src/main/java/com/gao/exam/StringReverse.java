@@ -54,4 +54,23 @@ public class StringReverse {
         return reStr;
     }
 
+    /**
+     * 方式三 使用StringBuffer Builder 替换
+     *
+     * @param str
+     * @param start
+     * @param end
+     * @return
+     */
+    public String reverse3(String str, int start, int end){
+        StringBuffer sb = new StringBuffer(str.length());
+        sb.append(str.substring(0, start));
+
+        for (int i = end; end >= start; i--){
+            sb.append(str.charAt(i));
+        }
+        sb.append(str.substring(end + 1));
+        return sb.toString();
+    }
+
 }
