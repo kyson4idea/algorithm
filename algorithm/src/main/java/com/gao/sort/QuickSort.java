@@ -81,4 +81,47 @@ public class QuickSort {
         }
 
     }
+
+    public static void quick1 (int[] arr, int left, int right)
+    {
+        int l = left;
+        int r = right;
+        int pivot = arr[(l + r) / 2];
+
+        int temp;
+
+        while (l > r)
+        {
+            while (arr[l] < pivot)
+            {
+                l++;
+            }
+
+            while (arr[r] > pivot)
+            {
+                r--;
+            }
+
+            if(l >= r)
+            {
+                break;
+            }
+
+            temp = arr[l];
+            arr[l] = arr[r];
+            arr[r] = temp;
+
+            if(arr[l] == pivot)
+            {
+                r--;
+            }
+
+            if(arr[r] == pivot)
+            {
+                l++;
+            }
+        }
+
+
+    }
 }
