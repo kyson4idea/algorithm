@@ -1,4 +1,4 @@
-package com.kyson.leetcode;
+package com.kyson.leetcode.array;
 
 /**
  * 给你两个按 非递减顺序 排列的整数数组 nums1 和 nums2，另有两个整数 m 和 n ，分别表示 nums1 和 nums2 中的元素数目。
@@ -41,7 +41,7 @@ package com.kyson.leetcode;
  * <p>
  * 进阶：你可以设计实现一个时间复杂度为 O(m + n) 的算法解决此问题吗？
  */
-public class MergeSortedArray {
+public class Easy088_MergeSortedArray {
 
     /**
      * 从后往前合并,因为 从前往后合并，把小的放到nums1前面。但这样会覆盖nums1原有的元素！
