@@ -1,4 +1,4 @@
-# LeetCode 算法学习项目
+# LeetCode 算法学习项目（JAVA）
 
 ## 📝 题目命名规范
 
