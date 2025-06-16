@@ -1,6 +1,6 @@
 package com.kyson.leetcode.array;
 
-/*
+/**
     LeetCode 189 - 旋转数组
     1. 题目分析
     题目要求：给定一个数组和一个数字k，把数组向右旋转k个位置。

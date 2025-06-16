@@ -1,6 +1,6 @@
 package com.kyson.leetcode.array;
 
-/*
+/**
     LeetCode 88. 合并两个有序数组
     1. 题目分析
     这道题要求我们将两个已经排序的数组合并成一个有序数组。

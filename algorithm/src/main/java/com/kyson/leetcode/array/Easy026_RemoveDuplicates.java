@@ -1,6 +1,6 @@
 package com.kyson.leetcode.array;
 
-/*
+/**
     LeetCode 26题：删除有序数组中的重复项
     1. 题目分析
     题目描述
