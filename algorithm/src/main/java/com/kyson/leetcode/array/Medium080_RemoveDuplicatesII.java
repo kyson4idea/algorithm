@@ -55,10 +55,11 @@ public class Medium080_RemoveDuplicatesII {
 
         for (int right = 2; right < nums.length; right++) {
             if(nums[right] != nums[left-2]) {
-
+                nums[left++] = nums[right];
+                left++;
             }
         }
 
-        return 0;
+        return left;
     }
 }
