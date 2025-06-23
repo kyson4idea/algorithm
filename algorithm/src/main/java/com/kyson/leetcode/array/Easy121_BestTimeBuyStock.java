@@ -15,11 +15,35 @@ package com.kyson.leetcode.array;
 public class Easy121_BestTimeBuyStock {
 
     /**
+     * 最优解法
+     * @param prices
+     * @return
+     */
+    public int maxProfit_(int[] prices) {
+        int minprice = Integer.MAX_VALUE;  // 记录历史最低价格
+        int maxprofit = 0;                // 记录最大利润
+
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < minprice) {
+                // 发现更低的价格，更新最低价格
+                minprice = prices[i];
+            } else if (prices[i] - minprice > maxprofit) {
+                // 当前价格不是最低价，计算如果今天卖出的利润
+                // 如果利润更大，更新最大利润
+                maxprofit = prices[i] - minprice;
+            }
+        }
+
+        return maxprofit;
+    }
+
+    /**
      * 动态规划解法：状态转移的思想
      * 状态定义：dp[i][0] 第i天不持有股票时的最大利润
      * dp[i][1] 第i天持有股票时的最大利润
      */
-    public int maxProfit(int[] prices) {
+    public int maxProfit(int[] prices){
+
         int n = prices.length;
 
         // 1. 边界情况处理
